@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalendarDogađaja.MainPage"
+             Title="Kalendar Događaja">
+
+
+        <StackLayout Padding="20">
+            <ListView x:Name="DogadajiListView" ItemSelected="OnDogadajSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Naziv}" Detail="{Binding Datum, StringFormat='{0:dd.MM.yyyy}'}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Dodaj Događaj" Clicked="OnDodajClicked"/>
+        </StackLayout>
+</ContentPage>
