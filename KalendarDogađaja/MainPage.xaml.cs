@@ -26,8 +26,9 @@
         {
             if (e.SelectedItem is Dogadaj odabraniDogadaj)
             {
-                await DisplayAlert("Događaj", $"{odabraniDogadaj.Naziv}\n{odabraniDogadaj.Opis}", "OK");
+                await Navigation.PushAsync(new PregledDogadajaPage(odabraniDogadaj));
             }
+            dogadajiListView.SelectedItem = null;
         }
     }
 }

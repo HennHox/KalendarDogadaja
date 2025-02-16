@@ -16,13 +16,20 @@ public partial class DodajDogadajPage : ContentPage
     {
         string naziv = nazivEntry.Text;
         string opis = opisEditor.Text;
+        DateTime datum = DatumPicker.Date;
 
         if (string.IsNullOrWhiteSpace(naziv) || string.IsNullOrWhiteSpace(opis))
         {
             await DisplayAlert("Greška", "Molimo unesite naziv i opis događaja.", "OK");
             return;
         }
-        App.Dogadaji.Add(new Dogadaj { Naziv = naziv, Opis = opis });
+
+        App.Dogadaji.Add(new Dogadaj
+        {
+            Naziv = naziv,
+            Opis = opis,
+            Datum = datum
+        });
 
         await DisplayAlert("Uspjeh", "Događaj spremljen!", "OK");
         await Shell.Current.GoToAsync("..");

@@ -10,6 +10,9 @@
         <Label Text="Opis događaja:" />
         <Editor x:Name="OpisEditor" Placeholder="Unesi opis" HeightRequest="100"/>
 
+        <Label Text="Datum događaja:" />
+        <DatePicker x:Name="DatumPicker" />
+
         <Button Text="Spremi" Clicked="OnSpremiClicked"/>
     </StackLayout>
 </ContentPage>

@@ -3,10 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KalendarDogađaja.PregledDogadajaPage"
              Title="Pregled Događaja">
-    <StackLayout Padding="20">
-        <Label x:Name="DetaljiLabel" Text="Detalji događaja će biti prikazani ovdje." />
-
-        <Button Text="Uredi" Clicked="OnUrediClicked"/>
-        <Button Text="Obriši" Clicked="OnObrisiClicked"/>
+    <StackLayout Padding="20" BackgroundColor="#38A3A5">
+        <Entry x:Name="NazivEntry" Placeholder="Naziv događaja" />
+        <Editor x:Name="OpisEditor" Placeholder="Opis" HeightRequest="100"/>
+        <DatePicker x:Name="DatumPicker" />
+        <Button Text="Spremi promjene" 
+                Clicked="OnSpremiClicked"
+                BackgroundColor="#3C9D9B"
+                TextColor="White"/>
+        <Button Text="Izbriši događaj" 
+                Clicked="OnIzbrisiClicked"
+                BackgroundColor="#57CC99"
+                TextColor="White"/>
     </StackLayout>
 </ContentPage>

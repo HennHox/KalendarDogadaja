@@ -5,10 +5,9 @@
              x:Class="KalendarDogađaja.App">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+            <Color x:Key="Primary">#3C9D9B</Color>
+            <Color x:Key="Secondary">#38A3A5</Color>
+            <Color x:Key="Accent">#57CC99</Color>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
